@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Archive Lens",
+  "version": "1.0.0",
+  "description": "Right-click any page or link to open in Archive.today or the Wayback Machine.",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    },
+    "default_title": "Open page in Archive.today"
+  },
+  "permissions": [
+    "contextMenus",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "open-archive-today": {
+      "suggested_key": {
+        "default": "Alt+A"
+      },
+      "description": "Open current page in Archive.today"
+    },
+    "open-wayback": {
+      "suggested_key": {
+        "default": "Alt+W"
+      },
+      "description": "Open current page in Wayback Machine"
+    }
+  }
+}
