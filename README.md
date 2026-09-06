@@ -1,5 +1,9 @@
 # Archive Lens 🔍
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Manifest V3](https://img.shields.io/badge/Chrome%20Extension-Manifest%20V3-blue.svg)]()
+[![Platform: Chromium / Brave / Chrome](https://img.shields.io/badge/Platform-Chromium%20%7C%20Brave%20%7C%20Chrome-brightgreen.svg)]()
+
 A lightweight, private, native Manifest V3 browser extension to instantly open paywalled, restricted, or historical web pages in **Archive.today** (`archive.ph`) or the **Wayback Machine** (`web.archive.org`).
 
 ---
