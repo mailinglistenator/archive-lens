@@ -56,7 +56,7 @@ def create_icon(size):
     # Resize to requested dimensions with Lanczos filter
     return img.resize((size, size), Image.Resampling.LANCZOS)
 
-output_dir = "/home/redking/.gemini/antigravity/scratch/archive-lens-extension/icons"
+output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "icons")
 os.makedirs(output_dir, exist_ok=True)
 
 sizes = [16, 32, 48, 128]

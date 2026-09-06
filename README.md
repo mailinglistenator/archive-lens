@@ -27,23 +27,26 @@ A lightweight, private, native Manifest V3 browser extension to instantly open p
 
 Works with **Chromium**, **Google Chrome**, **Brave**, or any Chromium-based browser:
 
-1. Open your browser and navigate to `chrome://extensions` (or `brave://extensions`).
-2. In the top-right corner, toggle **Developer mode** to **ON**.
-3. Click the **"Load unpacked"** button in the top-left corner.
-4. Select the extension directory:
+1. Clone or download this repository:
+   ```bash
+   git clone https://github.com/mailinglistenator/archive-lens.git
+   cd archive-lens
    ```
-   /home/redking/.gemini/antigravity/scratch/archive-lens-extension
-   ```
-5. *(Optional)* Click the puzzle piece icon in the browser toolbar and pin **Archive Lens** to keep it 1-click accessible.
+2. Open your browser and navigate to `chrome://extensions` (or `brave://extensions`).
+3. In the top-right corner, toggle **Developer mode** to **ON**.
+4. Click the **"Load unpacked"** button in the top-left corner.
+5. Select the cloned `archive-lens` folder.
+6. *(Optional)* Click the puzzle piece (Extensions) icon in your browser toolbar and pin **Archive Lens** for 1-click access.
 
 ---
 
-## Quick Test Run
+## Quick Test Run (Linux)
 
-To launch a test browser instance immediately with the extension preloaded:
+To launch a test browser instance immediately with the extension preloaded without touching your main profile:
 
 ```bash
-cd /home/redking/.gemini/antigravity/scratch/archive-lens-extension
+git clone https://github.com/mailinglistenator/archive-lens.git
+cd archive-lens
 ./test-extension.sh
 ```
 
@@ -52,7 +55,7 @@ cd /home/redking/.gemini/antigravity/scratch/archive-lens-extension
 ## Project Structure
 
 ```
-archive-lens-extension/
+archive-lens/
 ├── manifest.json         # Manifest V3 configuration
 ├── background.js         # Service worker handling context menus, cleaning & shortcuts
 ├── icons/                # 16, 32, 48, 128px high-DPI icons
