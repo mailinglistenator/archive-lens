@@ -2,7 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Manifest V3](https://img.shields.io/badge/Chrome%20Extension-Manifest%20V3-blue.svg)]()
-[![Platform: Chromium / Brave / Chrome](https://img.shields.io/badge/Platform-Chromium%20%7C%20Brave%20%7C%20Chrome-brightgreen.svg)]()
+[![Platform: Windows | macOS | Linux](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-brightgreen.svg)]()
+[![Browsers: Chrome | Edge | Brave | Opera](https://img.shields.io/badge/Browsers-Chrome%20%7C%20Edge%20%7C%20Brave%20%7C%20Opera-blue.svg)]()
 
 A lightweight, private, native Manifest V3 browser extension to instantly open paywalled, restricted, or historical web pages in **Archive.today** (`archive.ph`) or the **Wayback Machine** (`web.archive.org`).
 
@@ -25,29 +26,36 @@ A lightweight, private, native Manifest V3 browser extension to instantly open p
 
 ## Installation (Takes 10 Seconds)
 
-Works with **Chromium**, **Google Chrome**, **Brave**, or any Chromium-based browser:
+Works on **Windows**, **macOS**, and **Linux** with **Google Chrome**, **Microsoft Edge**, **Brave**, or any Chromium-based browser:
 
-1. Clone or download this repository:
+1. Clone or download this repository (or download the ZIP from GitHub and unzip it):
    ```bash
    git clone https://github.com/mailinglistenator/archive-lens.git
    cd archive-lens
    ```
-2. Open your browser and navigate to `chrome://extensions` (or `brave://extensions`).
-3. In the top-right corner, toggle **Developer mode** to **ON**.
-4. Click the **"Load unpacked"** button in the top-left corner.
-5. Select the cloned `archive-lens` folder.
+2. Open your browser extension manager:
+   * **Chrome / Brave**: `chrome://extensions` or `brave://extensions`
+   * **Microsoft Edge**: `edge://extensions`
+3. Enable **Developer mode** (toggle in the top-right corner on Chrome/Brave, or left sidebar on Edge).
+4. Click **"Load unpacked"** (or "Load unpacked extension").
+5. Select the `archive-lens` folder.
 6. *(Optional)* Click the puzzle piece (Extensions) icon in your browser toolbar and pin **Archive Lens** for 1-click access.
 
 ---
 
-## Quick Test Run (Linux)
+## Quick Test Run
 
-To launch a test browser instance immediately with the extension preloaded without touching your main profile:
+To test the extension immediately in a sandbox browser window without affecting your main profile:
 
+### Linux / macOS
 ```bash
-git clone https://github.com/mailinglistenator/archive-lens.git
-cd archive-lens
 ./test-extension.sh
+```
+
+### Windows
+Double-click `test-extension.bat` (or run it via Command Prompt / PowerShell):
+```cmd
+test-extension.bat
 ```
 
 ---
@@ -60,6 +68,7 @@ archive-lens/
 ├── background.js         # Service worker handling context menus, cleaning & shortcuts
 ├── icons/                # 16, 32, 48, 128px high-DPI icons
 ├── generate_icons.py     # Script used to generate crisp icon assets
-├── test-extension.sh     # Quick test launcher
+├── test-extension.sh     # Quick test launcher for Linux
+├── test-extension.bat    # Quick test launcher for Windows
 └── README.md
 ```
